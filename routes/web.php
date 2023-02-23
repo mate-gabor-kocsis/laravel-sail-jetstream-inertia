@@ -32,4 +32,11 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
+
+    Route::get('/events', function () {
+        return Inertia::render('Events/Index', [
+            "events" => [],
+        ]);
+    })->name('events');
+
 });
