@@ -18,7 +18,7 @@ const form = useForm({
 });
 
 const submit = () => {
-    form.put(route('events.update', props.event.id), {preserveScroll:true});
+    // submit Inertia form
 };
 </script>
 
@@ -45,7 +45,7 @@ const submit = () => {
                                 autofocus
                                 autocomplete="username"
                             />
-                            <InputError class="mt-2" :message="form.errors.title"/>
+                            // error message comes here
                         </div>
 
                         <div class="mt-4">
@@ -57,7 +57,7 @@ const submit = () => {
                                 class="mt-1 block w-full"
                                 required
                             />
-                            <InputError class="mt-2" :message="form.errors.start_date"/>
+                            // error message comes here
                         </div>
 
                         <div class="mt-4">
@@ -69,7 +69,7 @@ const submit = () => {
                                 class="mt-1 block w-full"
                                 required
                             />
-                            <InputError class="mt-2" :message="form.errors.end_date"/>
+                            // error message comes here
                         </div>
 
                         <div class="flex items-center justify-end mt-4">
@@ -78,8 +78,7 @@ const submit = () => {
                                 cancel
                             </Link>
 
-                            <PrimaryButton class="ml-4" :class="{ 'opacity-25': form.processing }"
-                                           :disabled="form.processing">
+                            <PrimaryButton class="ml-4">
                                 Save
                             </PrimaryButton>
                         </div>
